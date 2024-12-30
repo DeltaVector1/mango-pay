@@ -1,0 +1,149 @@
+/* Variables and Fonts */
+:root {
+    --background-color: #fff5e6;
+    --text-color: #333333;
+    --card-bg: #ffe0b3;
+    --border-color: #ffbf80;
+    --button-bg: #ffcc99;
+    --button-text: #333333;
+    --button-hover-bg: #ffb366;
+    --link-color: #ff8c1a;
+    --header-font: 'Orbitron', sans-serif;
+    --body-font: Arial, sans-serif;
+}
+
+/* Body and Main */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--body-font);
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    padding: 20px;
+    text-align: center;
+    background-color: var(--card-bg);
+    border-bottom: 5px solid var(--border-color);
+}
+
+header h1 {
+    margin: 0;
+    font-family: var(--header-font);
+}
+
+/* Card Grid */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Pricing Cards */
+.pricing-card {
+    background-color: var(--card-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s;
+}
+
+.pricing-card:hover {
+    transform: scale(1.02);
+}
+
+.pricing-card h2 {
+    font-family: var(--header-font);
+    text-align: center;
+    margin-top: 0;
+}
+
+.pricing-card ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.pricing-card p, .pricing-card li, .pricing-card a {
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--text-color);
+}
+
+.pricing-card a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+.pricing-card a:hover {
+    text-decoration: underline;
+}
+
+/* Buttons */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 30px 0;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+    font-family: var(--header-font);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: var(--button-hover-bg);
+}
+
+/* Mode Toggle Button */
+.mode-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: 2px solid var(--border-color);
+    border-radius: 50%;
+    cursor: pointer;
+    font-family: var(--header-font);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--card-bg);
+    border-top: 5px solid var(--border-color);
+}
+
+footer p {
+    margin: 0;
+    font-family: var(--body-font);
+}
+
+/* Dark Mode */
+body.dark-mode {
+    --background-color: #333333;
+    --text-color: #ffffff;
+    --card-bg: #4d4d4d;
+    --border-color: #666666;
+    --button-bg: #808080;
+    --button-text: #ffffff;
+    --button-hover-bg: #999999;
+    --link-color: #ffcc99;
+}
