@@ -2,18 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Mango commissions 🥭</title>
+    <title>Mango Cards 🥭</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Header Section -->
     <header>
-        <h1>Mango commissions 🥭</h1>
+        <h1>Mango Cards 🥭</h1>
     </header>
 
+    <!-- Navigation Buttons (Moved to Top) -->
+    <nav>
+        <div class="button-container">
+            <a href="https://mango.sillytilly.org/" class="button">Cards</a>
+            <a href="https://chub.ai/users/MangyMango" class="button">Chub</a>
+            <a href="https://huggingface.co/Delta-Vector" class="button">HF</a>
+            <a href="https://placeholder.com" class="button">Ko-Fi</a>
+            <a href="https://civitai.com/user/Magnum_Mango" class="button">CivitAI</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
     <main>
-        <div class="card-grid pricing-grid">
-            <div class="card pricing-card">
+        <!-- Pricing Grid -->
+        <div class="pricing-grid">
+            <!-- Basic Card -->
+            <div class="pricing-card">
                 <h2>Basic Card ($10)</h2>
                 <ul>
                     <li>Character description</li>
@@ -23,16 +39,18 @@
                 </ul>
             </div>
 
-            <div class="card pricing-card">
+            <!-- World-type Character -->
+            <div class="pricing-card">
                 <h2>World-type Character ($15+)</h2>
                 <p>
                     <a href="https://chub.ai/characters/greymatter/dark-and-darker" target="_blank">Example 1</a> |
                     <a href="https://chub.ai/characters/MangyMango/dino-survival-9f0e5499c674" target="_blank">Example 2</a>
                 </p>
-                <p>Charcards like the above; $15 - more if it's more complex with systems, tracking, etc.</p>
+                <p>Like the above - $15 - more if it's more complex with systems, tracking, etc.</p>
             </div>
 
-            <div class="card pricing-card">
+            <!-- Medium -->
+            <div class="pricing-card">
                 <h2>Medium ($20)</h2>
                 <ul>
                     <li>Character description</li>
@@ -43,7 +61,8 @@
                 </ul>
             </div>
 
-            <div class="card pricing-card">
+            <!-- Worldinfo/Multi-character Scenario Card -->
+            <div class="pricing-card">
                 <h2>Worldinfo/Multi-character Scenario Card ($25+)</h2>
                 <ul>
                     <li>$25 for 5 characters, $5 per additional character</li>
@@ -53,12 +72,14 @@
                 </ul>
             </div>
 
-            <div class="card pricing-card">
+            <!-- Custom Artist Lora -->
+            <div class="pricing-card">
                 <h2>Custom Artist Lora ($30)</h2>
-                <p>If you want a custom artist made that you can use with SDXL to generate any amount of character cards images / sprites on your own</p>
+                <p>If you want a custom artist made that you can use with SDXL to generate any amount of character cards on your own</p>
             </div>
 
-            <div class="card pricing-card">
+            <!-- Characters from Media Pricing -->
+            <div class="pricing-card">
                 <h2>Characters from Media Pricing (Anime, Movies, Etc)</h2>
                 <ul>
                     <li>No extra charge for popular characters (has wiki/videos/easily researchable content)</li>
@@ -67,28 +88,27 @@
             </div>
         </div>
 
+        <!-- Contact Section -->
         <div class="contact">
             <h2>Contact</h2>
             <ul>
-                <li>If you are interested in a commission, The following are ways to contact me aswell as provide payment</li>
-                <li>Contact me on my Discord 'sweetmango78'</li>
-                <li>Accepted payment is Crypto, PayPal or through my Ko-Fi (Check below)</li>
+                <li>If you are interested in a commission, the following are ways to contact me as well as provide payment:</li>
+                <li>Contact me on my Discord 'sweetmango78' or through my email 'mango@sillytilly.org'</li>
+                <li>Preferably through Discord as I do not check my email often.</li>
+                <li>Accepted payment is Crypto, PayPal, or through my Ko-Fi (Check below)</li>
             </ul>
         </div>
-    </div>
-
-        <div class="button-container">
-            <a href="https://mango.sillytilly.org/" class="button">Cards</a>
-            <a href="https://chub.ai/users/MangyMango" class="button">Chub</a>
-            <a href="https://huggingface.co/Delta-Vector" class="button">HF</a>
-            <a href="p;aceholder.coinm" class="button">Ko-Fi</a>
-            <a href="https://civitai.com/user/Magnum_Mango" class="button">CivitAI</a>
-        </div>
     </main>
-<button class="mode-toggle" onclick="toggleDarkMode()">Toggle Light/Dark Mode</button>
+
+    <!-- Dark/Light Mode Toggle -->
+    <button class="mode-toggle" onclick="toggleDarkMode()">☀️</button>
+
+    <!-- Footer -->
     <footer>
         <p>sweetmango78 on 'cord | Delta-Vector on 🤗</p>
     </footer>
+
+    <!-- Scripts -->
     <script src="scripts.js"></script>
 </body>
 </html>

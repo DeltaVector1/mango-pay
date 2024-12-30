@@ -9,50 +9,92 @@
     --button-hover-bg: #ffb366;
     --link-color: #ff8c1a;
     --header-font: 'Orbitron', sans-serif;
-    --body-font: Arial, sans-serif;
+    --body-font: 'Quicksand', sans-serif;
 }
 
-/* Body and Main */
-body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-    font-family: var(--body-font);
+/* General Styles */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--body-font);
 }
 
 /* Header */
 header {
-    padding: 20px;
-    text-align: center;
     background-color: var(--card-bg);
     border-bottom: 5px solid var(--border-color);
+    padding: 20px;
+    text-align: center;
 }
 
 header h1 {
-    margin: 0;
     font-family: var(--header-font);
+    margin: 0;
 }
 
-/* Card Grid */
+/* Navigation Buttons */
+nav {
+    background-color: var(--background-color);
+    padding: 10px 0;
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+    font-family: var(--header-font);
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: var(--button-hover-bg);
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Pricing Grid */
 .pricing-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
 }
 
-/* Pricing Cards */
 .pricing-card {
     background-color: var(--card-bg);
     border: 2px solid var(--border-color);
     border-radius: 10px;
     padding: 20px;
+    flex: 1 1 calc(33% - 40px);
+    max-width: calc(33% - 40px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
 }
 
@@ -60,10 +102,24 @@ header h1 {
     transform: scale(1.02);
 }
 
+@media (max-width: 992px) {
+    .pricing-card {
+        flex: 1 1 calc(50% - 40px);
+        max-width: calc(50% - 40px);
+    }
+}
+
+@media (max-width: 600px) {
+    .pricing-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
 .pricing-card h2 {
     font-family: var(--header-font);
     text-align: center;
-    margin-top: 0;
+    margin-bottom: 15px;
 }
 
 .pricing-card ul {
@@ -71,10 +127,13 @@ header h1 {
     padding-left: 20px;
 }
 
-.pricing-card p, .pricing-card li, .pricing-card a {
+.pricing-card p,
+.pricing-card li,
+.pricing-card a {
     font-size: 16px;
     line-height: 1.5;
     color: var(--text-color);
+    font-family: var(--body-font);
 }
 
 .pricing-card a {
@@ -86,41 +145,55 @@ header h1 {
     text-decoration: underline;
 }
 
-/* Buttons */
-.button-container {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin: 30px 0;
-}
-
-.button {
-    padding: 10px 20px;
-    background-color: var(--button-bg);
-    color: var(--button-text);
+/* Contact Section */
+.contact {
+    background-color: var(--card-bg);
     border: 2px solid var(--border-color);
-    border-radius: 5px;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact h2 {
     font-family: var(--header-font);
-    cursor: pointer;
-    transition: background-color 0.3s;
+    text-align: center;
+    margin-bottom: 15px;
 }
 
-.button:hover {
-    background-color: var(--button-hover-bg);
+.contact ul {
+    list-style-type: disc;
+    padding-left: 20px;
 }
 
-/* Mode Toggle Button */
+.contact li {
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: var(--body-font);
+    margin-bottom: 10px;
+}
+
+/* Dark/Light Mode Toggle */
 .mode-toggle {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    padding: 10px;
+    padding: 12px;
     background-color: var(--button-bg);
     color: var(--button-text);
     border: 2px solid var(--border-color);
     border-radius: 50%;
     cursor: pointer;
     font-family: var(--header-font);
+    font-size: 20px;
+    line-height: 1;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.mode-toggle:hover {
+    background-color: var(--button-hover-bg);
 }
 
 /* Footer */
